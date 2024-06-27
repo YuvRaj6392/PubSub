@@ -1,7 +1,5 @@
-import { pubSubManager } from "./PubSubManager";
+import { PubSubManager } from "./PubSubManager";
 
-setInterval(()=>{
-
-    pubSubManager.sayHello();
-
-},)
+setInterval(() => {
+    PubSubManager.getInstance().userSubscribe(Math.random().toString(), "APPL");
+}, 1)
